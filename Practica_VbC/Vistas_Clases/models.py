@@ -1,12 +1,16 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser
 
-class Usuarios(AbstractBaseUser):
+
+class Usuarios(models.Model):
     usenom=models.CharField(max_length=25)
     appuse=models.CharField(max_length=25)
     apmuse=models.CharField(max_length=25)
     edad=models.IntegerField()
     activo=models.BooleanField(default=True)
+
+    def __str__(self):
+        datos="{0}({1})"
+        return datos.format(self.usenom,self.activo)
 
 class Tareas():
     nomtarea=models.CharField(max_length=25)
