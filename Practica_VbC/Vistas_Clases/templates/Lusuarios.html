@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    
+    <a type="submit" href="{% url 'index'%}">Index</a>
+    <a type="submit" href="">Crear usuario</a>
+
+</head>
+<body >
+    <h1 style="color:blue">Lista de usuarios</h1>
+    
+    <table style="  width: 80%; border-collapse: collapse; border: 1px solid;">
+        <tr>
+            <th>#</th>
+            <th>Usuarios</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Edad</th>
+            <th>Acciones</th>
+        </tr>
+        <tbody >
+            {% for u in object_list %}
+            <tr style="text-align: center;">
+                <td >
+                    {{ forloop.counter }}
+                </td>
+                <td>
+                    {{ u.usenom }}
+                </td>
+                <td>
+                    {{ u.appuse }}
+                </td>
+                <td>
+                    {{ u.apmuse }}
+                </td>
+                <td>
+                    {{ u.edad }}
+                </td>
+                <td>
+                    <a type="submit" href="">Eliminar</a>
+                    <a type="submit" href="">Modificar</a>
+
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

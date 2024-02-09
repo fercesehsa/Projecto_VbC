@@ -9,10 +9,10 @@ class Usuarios(models.Model):
     activo=models.BooleanField(default=True)
 
     def __str__(self):
-        datos="{0}({1})"
-        return datos.format(self.usenom,self.activo)
+        datos="{0}"
+        return datos.format(self.usenom)
 
-class Tareas():
+class Tareas(models.Model):
     nomtarea=models.CharField(max_length=25)
     desctarea=models.CharField(max_length=150)
     iniciftarea=models.DateField()
