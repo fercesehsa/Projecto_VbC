@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear usuarios</title>
+</head>
+<body>
+    <a href="{% url 'listausuarios'%}">Listar usuarios</a>
+    <h1 style="color: aqua;">Nuevo usuario</h1>
+    <div style="text-align: center;">
+        <form method="post" action="#">
+            {% csrf_token %}
+            {{ form.as_p}}
+
+            <button type="submit">Nuevo usuario</button>
+        </form>
+
+    </div>
+    
+</body>
+</html>

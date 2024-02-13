@@ -6,7 +6,7 @@
     <title>{{ titulo }}</title>
     
     <a type="submit" href="{% url 'index'%}">Index</a>
-    <a type="submit" href="">Crear usuario</a>
+    <a type="submit" href="{% url 'crearusuario'%}">Crear usuario</a>
 
 </head>
 <body >
@@ -40,8 +40,8 @@
                     {{ u.edad }}
                 </td>
                 <td>
+                    <a type="submit" href="{% url 'modificarusuarios' u.id%}">Modificar</a>
                     <a type="submit" href="">Eliminar</a>
-                    <a type="submit" href="">Modificar</a>
 
                 </td>
             </tr>

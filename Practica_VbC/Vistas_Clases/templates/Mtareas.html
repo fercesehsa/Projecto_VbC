@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar tareas</title>
+    
+</head>
+<body>
+    <a href="{% url 'listatareas'%}">Listar tareas</a>
+    <h1>
+        Modificar tareas
+    </h1>
+    <div style="text-align: center;" >
+        <form method="post" action="#">
+            {% csrf_token %}          
+
+                <p>Nombre de tarea: </p>
+                {{ form.nomtarea }} 
+            <p>Descripcion de tarea:</p>
+                {{ form.desctarea }}
+            <p>Fecha de inicio tarea:</p>
+                {{form.iniciftarea}}
+            <p>Fecha final de tarea:</p>
+                {{form.finftarea}}
+            <p>Usuario asignado:</p>
+                {{form.usuario_tarea}}
+                <br>
+                
+                
+                <br>
+    
+            <button type="submit">Actualizar</button>
+            
+        </form>
+    </div>
+    
+</body>
+</html>
