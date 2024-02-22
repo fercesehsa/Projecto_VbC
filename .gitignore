@@ -1,7 +1,8 @@
-<<<<<<< HEAD
 env_VbC/**
 env38_Vbc/**
-=======
 .venv_Practica_VbC/\*
 env_VbC/**
->>>>>>> f8bc65ab688af188adf90cbfdd58bb6b56c32909
+__pycache__/
+migrations/
+*.pyc
+db.sqlite3

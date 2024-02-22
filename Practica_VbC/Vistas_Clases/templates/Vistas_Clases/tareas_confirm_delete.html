@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminacion tarea</title>
+</head>
+<body>
+<div style="text-align: center;">
+    <form method="post">    
+        {% csrf_token %}
+        <p>Desea eliminar el registro {{ object.nomtarea }}?</p>
+
+
+        <button><a type="submit">Eliminar</a></button>
+    </form>
+</div>
+</body>
+</html>

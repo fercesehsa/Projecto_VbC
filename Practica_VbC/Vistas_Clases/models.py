@@ -18,4 +18,9 @@ class Tareas(models.Model):
     iniciftarea=models.DateField()
     finftarea=models.DateField()
     usuario_tarea=models.ForeignKey(Usuarios, on_delete=models.CASCADE)
+    status=models.BooleanField(default=True)
+
+    def __str__(self):
+        
+        return self.nomtarea
 

@@ -6,7 +6,7 @@
     <title>{{ titulo }}</title>
     
     <a type="submit" href="{% url 'index'%}">Index</a>
-    <a type="submit" href="">Crear tarea</a>
+    <a type="submit" href="{% url 'creartareas'%}">Crear tarea</a>
 
 </head>
 <body >
@@ -44,9 +44,10 @@
                     {{ u.usuario_tarea }}
                 </td>
                 <td>
-                    <a type="submit" href="{% url 'modificartareas' u.id%}">Modificar</a>
-                    <a type="submit" href="">Eliminar</a>
                     
+                    <button ><a type="submit" href="{% url 'modificartareas' u.id%}" >Modificar</a></button>
+                    <button ><a type="submit" href="{% url 'eliminartarea' u.id%}">Eliminar</a></button>
+                
 
                 </td>
             </tr>
